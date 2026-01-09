@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app-motor-reglas:
+    build: .
+    container_name: motor_reglas_container
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx512m
+    restart: unless-stopped
